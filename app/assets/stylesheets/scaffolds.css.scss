@@ -15,6 +15,9 @@ pre {
   padding: 10px;
   font-size: 11px; }
 
+a.blank, a.blank:visited, a.blank:hover {
+  background-color: #CCC;
+}
 a {
   color: #000;
   &:visited {
