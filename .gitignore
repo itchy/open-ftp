@@ -12,7 +12,7 @@ db/*.sqlite3
 
 # Logs and yml #
 ######################
-config/initializers/*.yml
+# config/initializers/*.yml
 log/*.log
 tmp/**/*
 
