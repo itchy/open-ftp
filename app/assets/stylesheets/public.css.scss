@@ -1,6 +1,11 @@
 // Place all the styles related to the public controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  width: 960px;
+  border: 0 auto o auto;
+}
+
 form input[type="submit"]{
   background: #999;
   padding: 5px;
@@ -28,10 +33,21 @@ div#main {
   div#intro {
     padding-left: 40px;
     width: 600px; 
+    padding-bottom: 10px;
+    div.image_wrapper {
+      float: left;
+    }
+    div#welcome_text {
+      padding-top: 1px;
+      margin: 10px 0px 0px 250px;
+      p { font-size: 1.4em; }
+    }
+      
   }  
   div#login, div#register {
+    clear: both;
     font-size: 1.5em;
-    padding: 20px 40px;
+    padding: 0px 40px;
     form input{
       font-size: 1.0em;
     }
@@ -42,9 +58,15 @@ div#main {
 div#footer {
   padding: 5px 20px;
   background-color: #CCC;
+  div.image_wrapper {
+    padding: 15px;
+  }
 }
 
 div#error {
   padding: 5px 20px;
   background-color: #F55;
 }
+
+.float-left { float: left;}
+.float-right { float: right;}

@@ -1,9 +1,14 @@
 <div id="intro">
-	<p>Open-FTP is a bouncer for your downloadable files.  Place your files in <%= link_to "Box", "http://box.net"%>, then Open-FTP controls access to your shared files and will even text you if something interesting happens to one of your files.
-	</p>	
-	<p>
-		With Open-FTP watching you door,  your VIPs will get in, while everyone else is stuck outside!
-	</p>		
+	<div class="image_wrapper">
+		<%= image_tag("/assets/bouncer_vip_200.png", :id => "welcome_logo" ) %>
+	</div>
+	<div id="welcome_text">	
+		<p>Open-FTP is a bouncer for your downloadable files. Open-FTP controls access to your shared files and will even text you if something interesting happens to one of your files.
+		</p>	
+		<p>
+			With Open-FTP watching you door,  your VIPs will get in, while everyone else is stuck outside!
+		</p>
+	</div>		
 </div>	
 <div id="login">
 	<h3>Log in</h3>
@@ -18,6 +23,6 @@
 </div>
 
 <div id="register">
-	<h3>or</h3>
-	<%= button_to("Create Account", session_register_path)%>
+	<h3>or <%= link_to("Create an Account", session_register_path)%>
+	</h3>
 </div>		
