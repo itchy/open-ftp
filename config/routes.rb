@@ -18,8 +18,8 @@ Openftp::Application.routes.draw do
   
   match 'box/token' => 'box#token'
   
-  match 'downloads/:id' => 'downloads#show'
-  match 'downloads/' => 'downloads#show'
+  match 'downloads/:url_code' => 'downloads#download_box_file'
+  # match 'downloads/' => 'downloads#show'
   
 
   # The priority is based upon order of creation:

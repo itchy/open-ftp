@@ -8,9 +8,10 @@
 				<li class="file" id ="<%= file[:id] %>">
 					<%= file[:name] %>
 					<% if file[:watched] %>
+						<% box_file = BoxFile.find_by_file_id(file[:id])%>
 						<%= link_to("Unwatch", "/box_files/unwatch/#{file[:id]}") %>
 						<p class="watched_details">
-							public url
+							public url: <%= box_file.public_urls.first %>
 						</p>							
 					<% else %>
 						<%= link_to("Watch", "/box_files/watch/#{file[:id]}/#{file[:name]}") %>
