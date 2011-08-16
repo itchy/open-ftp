@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div id="links">
+	<%= link_to 'Edit profile', edit_user_path(@user) %> |
+	<%= link_to 'Show my files', box_files_path %>
+</div>	
+<div id="user">
+	<p>
+	  <b>Email:</b>
+	  <%= @user.email %>
+	</p>
+
+	<p>
+	  <b>Sms number:</b>
+	  <%= @user.sms_number %>
+	</p>
+</div>
+
+<div id="box">	
+	<% if current_user.box_auth_token %>
+		<h4>Your Open-FTP account is linked to Box, but if Open-FTP is having trouble accessing files from Box you can<br />
+		<%= link_to("Re-link Box account", @auth_box_url)%></h4>
+	<% else %>
+		<h4>Open-FTP uses <strong><%= link_to("Box", "http://box.net") %></strong> to securely store files.  If you have a <strong><%= link_to("Box", "http://box.net") %></strong> account, just link it to your Open-FTP by following the link below.  If you don't already have a <strong><%= link_to("Box", "http://box.net") %></strong> account, follow the link below and select Register to create a <strong><%= link_to("Box", "http://box.net") %></strong> account.</h4>
+	
+		<h3><%= link_to("Create or Link Box account", @auth_box_url)%></h3>
+	<% end %>	
+</div>	

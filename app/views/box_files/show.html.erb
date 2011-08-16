@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @box_file.user %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @box_file.name %>
+</p>
+
+<p>
+  <b>URL:</b>
+  <%= @box_file.download_url %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_box_file_path(@box_file) %> |
+<%= link_to 'Back', box_files_path %>

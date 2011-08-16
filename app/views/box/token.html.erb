@@ -1,0 +1,6 @@
+<% if current_user.box_auth_token %>
+	<h4>Your Box account has been linked!</h4>
+<% else %>	
+	<h4 class="error">There was an error linking your Box account.  Please try again.</h4>
+	<h3><%= link_to("Create or Link Box account", @auth_box_url)%></h3>
+<% end %>	

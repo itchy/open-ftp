@@ -1,0 +1,25 @@
+# Congif Files       #
+######################
+.bundle
+db/*.sqlite3
+
+# Documents #
+######################
+
+# Extra CSS #
+######################
+.sass-cache/
+
+# Logs and yml #
+######################
+config/initializers/*.yml
+log/*.log
+tmp/**/*
+
+# OS generated files #
+######################
+*~
+.DS_Store
+*.lock
+*.swp
+*.out

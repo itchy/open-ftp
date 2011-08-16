@@ -1,0 +1,27 @@
+<h1>Select files to watch</h1>
+
+<p>
+		
+	<% @folders.keys.each do |folder| %>
+		<ul class="folder" id="<%= @folders[folder][:id] %>"><%= folder %>
+			<% @folders[folder][:files].each do |file| %>
+				<li class="file" id ="<%= file[:id] %>">
+					<%= file[:name] %>
+					<% if file[:watched] %>
+						<%= link_to("Unwatch", "/box_files/unwatch/#{file[:id]}") %>
+						<p class="watched_details">
+							public url
+						</p>							
+					<% else %>
+						<%= link_to("Watch", "/box_files/watch/#{file[:id]}/#{file[:name]}") %>
+					<% end %>			
+				</li>
+			<% end %>
+		</ul>
+	<% end %>	
+
+</p>
+
+	
+
+<%#= link_to 'New Box file', new_box_file_path(:file_id => '862970270') %>

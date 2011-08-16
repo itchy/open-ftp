@@ -1,0 +1,15 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#box h3{ 
+  a, a:visited  {
+    padding: 5px;
+    background-color: #FFF;
+    color: #F00;
+  }
+  a:hover {
+    background-color: #CCD;
+    color: #F00; 
+  }
+}

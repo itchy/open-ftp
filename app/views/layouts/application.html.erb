@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Openftp</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'header' %>
+<%= (render 'error', {:error => flash[:error]}) if flash[:error] %>
+<div id="main">
+	<%= yield %>
+</div>	
+<%= render 'footer' %>
+</body>
+</html>

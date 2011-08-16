@@ -1,0 +1,14 @@
+<div id="header">
+	<div id="banner">
+		<h1>Open-FTP</h1>
+		<h3>Mange File Distribution via SMS</h3>
+	</div>
+	
+	<% if current_user && current_user.id %>	
+		<div id="nav">
+			<h3><%=link_to("logout", session_logout_path )%></h3>
+			<h3><%=link_to("profile", user_path(current_user) )%></h3>
+			<h3><%=link_to("files", box_files_path )%></h3>
+		</div>	
+	<% end %>
+</div>

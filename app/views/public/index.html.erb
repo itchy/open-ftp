@@ -1,0 +1,23 @@
+<div id="intro">
+	<p>Open-FTP is a bouncer for your downloadable files.  Place your files in <%= link_to "Box", "http://box.net"%>, then Open-FTP controls access to your shared files and will even text you if something interesting happens to one of your files.
+	</p>	
+	<p>
+		With Open-FTP watching you door,  your VIPs will get in, while everyone else is stuck outside!
+	</p>		
+</div>	
+<div id="login">
+	<h3>Log in</h3>
+	<%= form_for :user, :url => session_login_path, :html => { :class => "html5", :id => "login_form", "accept-charset" => "utf-8"} do  |f| %>
+		<div id="errors" class="error" >
+			<!-- This is a place holder DIV where any error messages about this form will be placed -->
+		</div>
+		<%= f.text_field :email, :placeholder => "email", %>
+		<%= f.password_field :password, :placeholder => "password" %>
+		<%= f.submit :login %>
+	<% end %>
+</div>
+
+<div id="register">
+	<h3>or</h3>
+	<%= button_to("Create Account", session_register_path)%>
+</div>		

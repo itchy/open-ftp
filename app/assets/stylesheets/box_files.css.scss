@@ -1,0 +1,16 @@
+// Place all the styles related to the BoxFiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.folder {
+  font-size: 3em;
+  line-height: 1.2em;
+  list-style: none;
+  li {
+    margin-left: 20px;
+    font-size: 0.6em;
+    p.watched_details {
+      margin: 0px 20px;
+    }  
+  }  
+}

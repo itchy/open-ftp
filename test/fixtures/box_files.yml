@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+one:
+  user_id: 1 
+  name: public
+  url_code: MyString
+  file_id: MyString
+  download_count: 1
+  max_downloads: 1
+
+two:
+  user: 1
+  name: openftp
+  url_code: MyString
+  file_id: MyString
+  download_count: 1
+  max_downloads: 5
