@@ -2,11 +2,11 @@
 	<div class="image_wrapper">
 		<%= image_tag("/images/bouncer_vip_200.png", :id => "welcome_logo" ) %>
 	</div>
-	<div id="welcome_text">	
-		<p>Open-FTP is a bouncer for your downloadable files. Open-FTP controls access to your shared files and will even text you if something interesting happens to one of your files.
+	<div id="welcome-text">	
+		<p>Open-FTP is a bouncer for your downloadable files. Open-FTP controls access to your shared files and will even <strong>text you</strong> if something interesting happens to one of your files.
 		</p>	
 		<p>
-			With Open-FTP watching you door,  your VIPs will get in, while everyone else is stuck outside!
+			With Open-FTP watching your door,  VIPs get in, everyone else is stuck outside!
 		</p>
 	</div>		
 </div>	
@@ -23,6 +23,5 @@
 </div>
 
 <div id="register">
-	<h3>or <%= link_to("Create an Account", session_register_path)%>
-	</h3>
+	<h3>or <%= link_to("Create an Account", session_register_path)%></h3>
 </div>		

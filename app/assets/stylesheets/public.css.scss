@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  width: 960px;
-  border: 0 auto o auto;
+	margin: 0 auto 0 auto;
+	width: 960px;
 }
 
 form input[type="submit"]{
@@ -33,14 +33,15 @@ div#main {
   div#intro {
     padding-left: 40px;
     width: 600px; 
-    padding-bottom: 10px;
     div.image_wrapper {
       float: left;
     }
-    div#welcome_text {
-      padding-top: 1px;
+    div#welcome-text {
       margin: 10px 0px 0px 250px;
-      p { font-size: 1.4em; }
+      p { 
+        font-size: 1.4em; 
+        line-height: 1.2em;
+      }
     }
       
   }  
@@ -58,8 +59,15 @@ div#main {
 div#footer {
   padding: 5px 20px;
   background-color: #CCC;
+  h5#power {
+    margin: 0px;
+    padding: 0px 10px;
+  }
+/*  div#footer-left {
+    width: 400px;
+  }*/  
   div.image_wrapper {
-    padding: 15px;
+    padding-left: 25px;
   }
 }
 
@@ -68,5 +76,6 @@ div#error {
   background-color: #F55;
 }
 
+.clear { clear: both;}
 .float-left { float: left;}
 .float-right { float: right;}
