@@ -1,7 +1,6 @@
 <h1>Select files to watch</h1>
 
-<p>
-		
+<p>	
 	<% @folders.keys.each do |folder| %>
 		<ul class="folder" id="<%= @folders[folder][:id] %>"><%= folder %>
 			<% @folders[folder][:files].each do |file| %>

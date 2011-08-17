@@ -49,7 +49,15 @@ class BoxFile < ActiveRecord::Base
     msg = "Open-FTP - File: #{self.name} downloaded With code: #{self.url_code} Downloads: #{self.downloads}"
   end
   
-  class << self 
+  class << self
+    def box_auth_status(xml)
+      Hashie::Mash.new(Hash.from_xml(xml)).response.status
+    end
+    
+    def box_auth_valid?(xml)
+      self.box_auth_status(xml) == "listing_ok"
+    end
+     
     def folder_xml(user, folder_id=0)
       url = "#{BOX_API_URL}/rest?action=get_account_tree&"
       url += "api_key=#{BOX_API_KEY}&auth_token=#{user.box_auth_token}"
@@ -58,6 +66,7 @@ class BoxFile < ActiveRecord::Base
     end
   
     def folder_tree(xml)
+      return unless self.box_auth_valid?(xml)
       folders = Hashie::Mash.new(Hash.from_xml(xml)).response.tree.folder.folders.folder
     
       tree_hash = {}    
