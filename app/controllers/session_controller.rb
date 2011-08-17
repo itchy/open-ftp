@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-  before_filter :authenticate, :except => [:login, :register, :logout]
+  # before_filter :authenticate, :except => [:login, :register, :create, :logout]
   
   def login
     if params[:user] && params[:user][:email]
@@ -12,7 +12,7 @@ class SessionController < ApplicationController
       redirect_to box_files_path
       # render :text => "You're in!"
     else
-      flash[:error] = "Invalid email/password combination!"
+      flash[:login_error] = "Invalid email/password combination!"
       redirect_to "/"
     end      
   end
@@ -24,7 +24,9 @@ class SessionController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      render user_path(@user)
+      set_current_user(@user)
+      puts "**************************\n\n#{user_path(current_user)}\n\n***********************"
+      redirect_to user_path(current_user)
     else
       render :register
     end    

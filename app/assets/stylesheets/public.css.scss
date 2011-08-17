@@ -24,7 +24,7 @@ div#header {
     float:left;
   }  
   div#nav {
-    margin-left: 600px;
+    float: right;
   }  
 }
 
@@ -49,6 +49,10 @@ div#main {
     clear: both;
     font-size: 1.5em;
     padding: 0px 40px;
+    form h3.error {
+      margin-left: 100px;
+      color: red;
+    }  
     form input{
       font-size: 1.0em;
     }
