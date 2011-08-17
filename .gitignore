@@ -5,6 +5,7 @@ db/*.sqlite3
 
 # Documents #
 ######################
+doc/*.key
 
 # Extra CSS #
 ######################
