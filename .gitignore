@@ -1,5 +1,6 @@
 # Congif Files       #
 ######################
+.rvmrc
 .bundle
 db/*.sqlite3
 

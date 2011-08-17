@@ -16,11 +16,13 @@ class PublicController < ApplicationController
     body = params[:body]
     from = params[:from]
     from_zip =  params[:FromZip]
-    if account_sid == TWILIO_ACCOUNT_SID && from && body
+    if from && body && # account_sid == TWILIO_ACCOUNT_SID 
       sms = TwilioNet.new()
       sms.send_sms('2146680255', truncate("FROM:#{from}  BODY:#{body}", :length => 159) )
+      render :text => sms.inspect
+    else
+      raise error  
     end 
-    render :text => "OK" 
   rescue
     render :text => "Invalid Params #{params.inspect}"
   end
