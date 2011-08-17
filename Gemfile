@@ -24,6 +24,7 @@ end
 
 gem 'jquery-rails'
 gem 'box-api'
+gem 'twilio-ruby'
 gem 'rest-client'
 gem 'hashie'
 

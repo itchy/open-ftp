@@ -41,7 +41,12 @@ class BoxFile < ActiveRecord::Base
     return unless self.ok_to_pull?
     self.downloads += 1
     self.save
+    TwilioNet.new().send_sms(self.user.sms_number, self.sms_message )
     RestClient.get self.pull_url
+  end
+  
+  def sms_message
+    msg = "Open-FTP - File: #{self.name} downloaded With code: #{self.url_code} Downloads: #{self.downloads}"
   end
   
   class << self 
