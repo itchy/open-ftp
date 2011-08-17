@@ -1,5 +1,6 @@
 Openftp::Application.routes.draw do
   match 'public/' => 'public#index'
+  match '/sms' => 'public#sms'
   root :to => 'public#index'
   # session
   match 'session/register' => 'session#register'
