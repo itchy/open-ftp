@@ -19,7 +19,7 @@ form input[type="submit"]:hover {
 div#header {
   padding: 5px 20px;
   background-color: #CCC;
-  height: 120px;
+  height: 80px;
   div#banner {
     float:left;
   }  
@@ -30,6 +30,7 @@ div#header {
 
 div#main {
   padding-left: 40px;
+  border: 6px #CCC solid;
   div#intro {
     padding-left: 40px;
     width: 600px; 
@@ -51,7 +52,7 @@ div#main {
     padding: 0px 40px;
     form h3.error {
       margin-left: 100px;
-      color: red;
+      background-color: #F55;
     }  
     form input{
       font-size: 1.0em;
