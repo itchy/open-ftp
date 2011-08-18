@@ -50,13 +50,18 @@ div#main {
     clear: both;
     font-size: 1.5em;
     padding: 0px 40px;
-    form h3.error {
+    form {
+      label#password {
+        margin-left: 265px;
+      }  
+      h3.error {
       margin-left: 100px;
       background-color: #F55;
-    }  
-    form input{
+      }  
+      input{
       font-size: 1.0em;
-    }
+      }
+    }  
   }
 }
 

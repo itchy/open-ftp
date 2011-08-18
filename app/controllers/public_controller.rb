@@ -13,8 +13,8 @@ class PublicController < ApplicationController
   # should respond to post
   def sms
     account_sid = params[:AccountSid]
-    body = params[:body]
-    from = params[:from]
+    body = params[:Body]
+    from = params[:From]
     from_zip =  params[:FromZip]
     if from && body && # account_sid == TWILIO_ACCOUNT_SID 
       sms = TwilioNet.new()

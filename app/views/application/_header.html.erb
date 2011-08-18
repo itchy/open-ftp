@@ -10,8 +10,10 @@
 				<%=link_to("files", box_files_path )%> | 
 				<%=link_to("profile", user_path(current_user) )%> | 
 				<%=link_to("logout", session_logout_path )%>
+			<% elsif params[:action] == 'register' %>
+				<%= link_to("Cancel", "/") unless params[:action] == 'index' %>
 			<% else %>
-				<%= link_to("How it Works", "/intro") unless params[:action] == 'intro' %> 
+				<%= link_to("How it Works", "/intro") unless params[:action] == 'intro'   %> 
 				<%= link_to("Login", "/") unless params[:action] == 'index' %>
 			<% end %>
 		</h3>
