@@ -21,7 +21,20 @@ class BoxFile < ActiveRecord::Base
   def downloads=(val)
     self.download_count ||= 0
     self.download_count = val
-  end  
+  end
+  
+  def download_limit
+    self.max_downloads ||= 0
+  end
+  
+  def download_limit=(val)
+    self.max_downloads ||= 0
+    self.max_downloads = val
+  end
+  
+  def notify_by_sms?
+    notify > 0 
+  end
   
   def public_urls
     # this will one day include the download code
@@ -34,14 +47,14 @@ class BoxFile < ActiveRecord::Base
   
   def ok_to_pull?
     # put in validations
-    true
+    self.downloads < self.download_limit
   end
   
   def pull
     return unless self.ok_to_pull?
     self.downloads += 1
     self.save
-    TwilioNet.new().send_sms(self.user.sms_number, self.sms_message )
+    TwilioNet.new().send_sms(self.user.sms_number, self.sms_message ) if self.notify_by_sms?
     RestClient.get self.pull_url
   end
   

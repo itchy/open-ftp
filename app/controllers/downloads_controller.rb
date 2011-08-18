@@ -8,7 +8,7 @@ class DownloadsController < ApplicationController
       data = box_file.pull
       send_data data, :filename => box_file.name
     else
-      render :text => "Whoa! Stop right there.  You are not on the list.  If you feel you should be on the list to download the selected file, please contact the person who controlls the requested file, and have them put you on the list."  
+      render :layout => 'download_error', :template => 'application/file_restricted'  
     end
   end
   

@@ -10,7 +10,11 @@
 						<% box_file = BoxFile.find_by_file_id(file[:id])%>
 						<%= link_to("Unwatch", "/box_files/unwatch/#{file[:id]}") %>
 						<p class="watched_details">
-							public url: <%= box_file.public_urls.first %>
+							public url: <%= box_file.public_urls.first %><br/>
+							notify: <%= link_to(box_file.notify_by_sms?.to_s, "/box_files/togle_notify/#{file[:id]}") %><br/>
+							downloads: <%= box_file.downloads %> 
+							max: <%= box_file.download_limit %>
+							<%= link_to("Up", "/box_files/increment_downloads/#{file[:id]}") %>
 						</p>							
 					<% else %>
 						<%= link_to("Watch", "/box_files/watch/#{file[:id]}/#{file[:name]}") %>

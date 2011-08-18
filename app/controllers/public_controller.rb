@@ -27,4 +27,8 @@ class PublicController < ApplicationController
     render :text => "Invalid Params #{params.inspect}"
   end
   
+  def intro
+    
+  end
+  
 end

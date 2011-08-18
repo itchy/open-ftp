@@ -20,7 +20,16 @@ private
   end
   
   def authenticate
-    session[:user_id] = current_user.id
-    current_user.id
+    if current_user
+      session[:user_id] = current_user.id
+      current_user.id
+    else
+      exit
+    end    
+  end
+  
+  def exit
+    set_current_user(nil)
+    redirect_to "/"
   end
 end

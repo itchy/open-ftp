@@ -1,6 +1,7 @@
 Openftp::Application.routes.draw do
   match 'public/' => 'public#index'
   match '/sms' => 'public#sms', :via => [:get, :post]
+  match '/intro' => 'public#intro', :via => [:get, :post]
   root :to => 'public#index'
   # session
   match 'session/register' => 'session#register'
@@ -12,7 +13,8 @@ Openftp::Application.routes.draw do
   match 'box_files/' => 'box_files#index'
   match 'box_files/watch/:file_id/:name' => 'box_files#watch'
   match 'box_files/unwatch/:file_id' => 'box_files#unwatch'
-  
+  match 'box_files/togle_notify/:file_id' => 'box_files#togle_notify'
+  match 'box_files/increment_downloads/:file_id' => 'box_files#increment_downloads'
   
   resources :users
 

@@ -33,8 +33,7 @@ class SessionController < ApplicationController
   end
   
   def logout
-    set_current_user(nil)
-    redirect_to "/"
+    exit
   end
   
 end

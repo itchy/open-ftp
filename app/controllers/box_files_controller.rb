@@ -32,5 +32,24 @@ class BoxFilesController < ApplicationController
     redirect_to :action => "index"
   end
 
+  def togle_notify
+    bf = current_user.box_files.find_by_file_id(params[:file_id])
+    # SSJ odd that I have to set this as a seperate var.  I figure that the meta methods only do get and set not math
+    num = bf.notify
+    bf.notify= (num-1).abs
+    bf.save
+    
+    redirect_to :action => "index"
+  end
+  
+  def increment_downloads
+    bf = current_user.box_files.find_by_file_id(params[:file_id]) 
+    # SSJ odd that I have to set this as a seperate var.  I figure that the meta methods only do get and set not math
+    # num = bf.download_limit
+    bf.download_limit += 1 #(num +1)
+    bf.save
+    
+    redirect_to :action => "index"
+  end
 
 end
