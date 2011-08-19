@@ -19,7 +19,7 @@ class PublicController < ApplicationController
     if from && body && # account_sid == TWILIO_ACCOUNT_SID 
       sms = TwilioNet.new()
       sms.send_sms('2146680255', truncate("FROM:#{from}  BODY:#{body}", :length => 159) )
-      render :text => sms.inspect
+      render :layout => 'empty', :template => 'public/sms'  
     else
       raise error  
     end 
