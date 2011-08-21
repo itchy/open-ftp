@@ -7,6 +7,7 @@ db/*.sqlite3
 # Documents #
 ######################
 doc/*.key
+doc/marketing/*
 
 # Extra CSS #
 ######################
