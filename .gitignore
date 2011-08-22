@@ -3,7 +3,7 @@
 .rvmrc
 .bundle
 db/*.sqlite3
-config/initializers/api.yml
+*.private
 
 # Documents #
 ######################
