@@ -1,0 +1,7 @@
+box:
+  api_key: your-box-api-key
+  
+twilio:
+  account_sid: your-twilio-account-sid
+  auth_token: your-twilio-auth-token  
+  phone_number: your-twilio-phonenumber
