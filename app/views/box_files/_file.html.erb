@@ -1,7 +1,7 @@
 <li class="file" id ="<%= file.id %>">
 	<strong><%= file.name %></strong>
 	<% if file.watched %>
-		<% box_file = BoxFile.find_by_file_id(file.id)%>
+		<% box_file = BoxFile.find_by_file_id(file.id.to_s)%>
 		<%= link_to("Unwatch", "/box_files/unwatch/#{file.id}") %>
 		<p class="watched_details">
 			public url: <%= box_file.public_urls.first %><br/>
