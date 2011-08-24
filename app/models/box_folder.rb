@@ -68,20 +68,8 @@ class BoxFolder
           bf.watched = BoxFile.find_by_file_id_and_watched(file.id, 1)
           tree.files << bf
         end  
-      end  
-    
+      end 
       tree
-      
-      # tree_hash = {}    
-      # folders.each do |folder|
-      #   tree_hash[folder.name] = {:id => folder.id }
-      # 
-      #   files = [folder.files.file].flatten(1)
-      #   tree_hash[folder.name][:files] = files.each.collect do |file|
-      #     { :id => file.id,  :name => file.file_name, :watched => BoxFile.find_by_file_id_and_watched(file.id, 1) }
-      #   end
-      # end    
-      # tree_hash
     end
     
   end

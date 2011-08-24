@@ -11,6 +11,6 @@
 			<%= link_to("Up", "/box_files/increment_downloads/#{file.id}") %>
 		</p>							
 	<% else %>
-		<%= link_to("Watch", "/box_files/watch/#{file.id}") %>
+		<%= link_to("Watch", "/box_files/watch/#{file.id}?name=#{file.name}") %>
 	<% end %>
 </li>	
