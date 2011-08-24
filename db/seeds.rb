@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-u = User.create(:email => '7.scott.j@gmail.com', :sms_number => '214-668-0255', :box_auth_token => 'r6eehg2tjhgccru3n72m76fu85fq5njt', :password => 'abc123')
+u = User.create(:email => '7.scott.j@gmail.com', :sms_number => '214-668-0255', :box_auth_token => 'j0tujcgjokytyip9dnxystc96myjbea8', :password => 'abc123')
 u.save

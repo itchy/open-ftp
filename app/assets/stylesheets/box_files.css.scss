@@ -2,15 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-ul.folder {
-  font-size: 3em;
-  line-height: 1.2em;
+dl.folder {
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 22px;
   list-style: none;
   li {
-    margin-left: 20px;
-    font-size: 0.6em;
+    margin-left: 10px;
+    font-size: 12px;
     p.watched_details {
-      margin: 0px 20px;
+      margin: 0px 10px;
     }  
   }  
 }

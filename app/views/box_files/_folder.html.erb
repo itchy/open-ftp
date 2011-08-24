@@ -1,0 +1,9 @@
+<dl class="folder"><%= folder.name %>
+	<% bf = BoxFolder.open_folder(current_user, folder.id) %>
+	<% bf.files.each do |file| %>
+		<%= render 'file', {:file => file } %>
+	<% end %>	
+	<% bf.folders.each do |folder| %>
+		<%= render 'folder', {:folder => folder} %>
+	<% end %>
+</dl>	

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<response>
+	<status>listing_ok</status>
+	<tree>
+		<folder id="0" name="" description="" user_id="12960146" shared="" shared_link="" permissions="douv" size="210807" file_count="" created="" updated="" >
+			<tags></tags>
+			<folders>
+				<folder id="103995138" name="openftp" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="210458" file_count="2" created="1313215203" updated="1313265122" >
+					<tags></tags>
+					<files>
+						<file id="862970270" file_name="LSRC-2011 Notes.txt" shared="0" sha1="c92af1ff6858390c750a5fc7f33b196230cca398" created="1313215213" updated="1313215423" size="349" shared_link="" description="" user_id="12960146" thumbnail="https://www.box.net/api/thumbs/27x30/text/txt.gif" small_thumbnail="https://www.box.net/api/thumbs/27x30/text/txt.gif" large_thumbnail="https://www.box.net/api/thumbs/43x51/text/txt.gif" larger_thumbnail="https://www.box.net/api/thumbs/43x51/text/txt.gif" preview_thumbnail="https://www.box.net/api/thumbs/242x286/text/txt.png" permissions="gdcenopstuv"  >
+							<tags></tags>
+						</file>
+						<file id="863657556" file_name="scott_t.png" shared="0" sha1="2492539a16371d324b1058e116401b04c01e1b92" created="1313265120" updated="1313265121" size="210109" shared_link="" description="" user_id="12960146" thumbnail="https://www.box.net/api/data/ib2/public/small_thumb/2011-08-13/a93f4b4d257464114f66e046710a615d.gif" small_thumbnail="https://www.box.net/api/data/ib2/public/small_thumb/2011-08-13/a93f4b4d257464114f66e046710a615d.gif" large_thumbnail="https://www.box.net/api/data/ib2/public/large_thumb/2011-08-13/a93f4b4d257464114f66e046710a615d.jpg" larger_thumbnail="https://www.box.net/api/data/ib2/public/larger_thumb/2011-08-13/a93f4b4d257464114f66e046710a615d.jpg" preview_thumbnail="https://www.box.net/api/data/ib2/public/preview_thumb/2011-08-13/a93f4b4d257464114f66e046710a615d.jpg" permissions="gdcenopstuv"  >
+							<tags></tags>
+						</file>
+					</files>
+				</folder>
+				<folder id="103986262" name="Public" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="349" file_count="1" created="1313209416" updated="1313209680" >
+					<tags></tags>
+					<files>
+						<file id="862896346" file_name="LSRC-2011 Notes.txt" shared="1" sha1="c92af1ff6858390c750a5fc7f33b196230cca398" created="1313209680" updated="1313209699" size="349" shared_link="https://www.box.net/shared/mcayy5j3ttlbg81l8xvl" description="" user_id="12960146" thumbnail="https://www.box.net/api/thumbs/27x30/text/txt.gif" small_thumbnail="https://www.box.net/api/thumbs/27x30/text/txt.gif" large_thumbnail="https://www.box.net/api/thumbs/43x51/text/txt.gif" larger_thumbnail="https://www.box.net/api/thumbs/43x51/text/txt.gif" preview_thumbnail="https://www.box.net/api/thumbs/242x286/text/txt.png" permissions="gdcenopstuv"  >
+							<tags></tags>
+						</file>
+					</files>
+				</folder>
+			</folders>
+		</folder>
+	</tree>
+</response>

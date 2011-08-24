@@ -1,31 +1,9 @@
 <h1>Select files to watch</h1>
-
-<p>	
-	<% @folders.keys.each do |folder| %>
-		<ul class="folder" id="<%= @folders[folder][:id] %>"><%= folder %>
-			<% @folders[folder][:files].each do |file| %>
-				<li class="file" id ="<%= file[:id] %>">
-					<%= file[:name] %>
-					<% if file[:watched] %>
-						<% box_file = BoxFile.find_by_file_id(file[:id])%>
-						<%= link_to("Unwatch", "/box_files/unwatch/#{file[:id]}") %>
-						<p class="watched_details">
-							public url: <%= box_file.public_urls.first %><br/>
-							notify: <%= link_to(box_file.notify_by_sms?.to_s, "/box_files/togle_notify/#{file[:id]}") %><br/>
-							downloads: <%= box_file.downloads %> 
-							max: <%= box_file.download_limit %>
-							<%= link_to("Up", "/box_files/increment_downloads/#{file[:id]}") %>
-						</p>							
-					<% else %>
-						<%= link_to("Watch", "/box_files/watch/#{file[:id]}/#{file[:name]}") %>
-					<% end %>			
-				</li>
-			<% end %>
-		</ul>
+<dl class="folder">Box.net	
+	<% @base.files.each do |file| %>
+		<%= render 'file', {:file => file } %>
 	<% end %>	
-
-</p>
-
-	
-
-<%#= link_to 'New Box file', new_box_file_path(:file_id => '862970270') %>
+	<% @base.folders.each do |folder| %>
+		<%= render 'folder', {:folder => folder} %>
+	<% end %>	
+</dl>

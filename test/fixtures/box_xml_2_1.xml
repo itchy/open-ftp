@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<response>
+	<status>listing_ok</status>
+	<tree>
+		<folder id="0" name="" description="" user_id="12960146" shared="" shared_link="" permissions="douv" size="23375" file_count="" created="" updated="" >
+		 	<tags></tags>
+			<folders>
+				<folder id="106670206" name="openftp" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="0" file_count="0" created="1314161234" updated="1314161234" >
+					<tags></tags>
+				</folder>
+				<folder id="106671570" name="public" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="0" file_count="0" created="1314161499" updated="1314162405" >
+					<tags></tags>
+					<folders>
+						<folder id="106676508" name="public_2" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="0" file_count="0" created="1314162405" updated="1314162405" >
+							<tags></tags>
+						</folder>
+					</folders>
+				</folder>
+			</folders>
+			<files>
+				<file id="879158172" file_name="Screen shot 2011-08-19 at 2.11.32 PM.png" shared="0" sha1="d80169b57f51f5139eb4fd4e517c887bbff2971d" created="1314162492" updated="1314162492" size="23375" shared_link="" description="" user_id="12960146" thumbnail="https://www.box.net/api/data/ib2/public/small_thumb/2011-08-23/5421249634de6f5807006300d33c828d.gif" small_thumbnail="https://www.box.net/api/data/ib2/public/small_thumb/2011-08-23/5421249634de6f5807006300d33c828d.gif" large_thumbnail="https://www.box.net/api/data/ib2/public/large_thumb/2011-08-23/5421249634de6f5807006300d33c828d.jpg" larger_thumbnail="https://www.box.net/api/data/ib2/public/larger_thumb/2011-08-23/5421249634de6f5807006300d33c828d.jpg" preview_thumbnail="https://www.box.net/api/data/ib2/public/preview_thumb/2011-08-23/5421249634de6f5807006300d33c828d.jpg" permissions="gdcenopstuv"  >
+					<tags></tags>
+				</file>
+			</files>
+		</folder>
+	</tree>
+</response>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<response>
+	<status>listing_ok</status>
+	<tree>
+		<folder id="0" name="" description="" user_id="12960146" shared="" shared_link="" permissions="douv" size="0" file_count="" created="" updated="" >
+			<tags></tags>
+			<folders>
+				<folder id="106670206" name="openftp" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="0" file_count="0" created="1314161234" updated="1314161234" >
+					<tags></tags>
+				</folder>
+				<folder id="106671570" name="public" description="" user_id="12960146" shared="0" shared_link="" permissions="kcfgtedopnsuv" size="0" file_count="0" created="1314161499" updated="1314161499" >
+					<tags></tags>
+				</folder>
+			</folders>
+		</folder>
+	</tree>
+</response>

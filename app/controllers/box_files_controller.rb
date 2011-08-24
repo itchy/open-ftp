@@ -1,18 +1,19 @@
 class BoxFilesController < ApplicationController
-  before_filter :authenticate
+  # before_filter :authenticate
   
   def index
-    xml = BoxFile.folder_xml(current_user)
-    if BoxFile.box_auth_valid?(xml)
-      @folders = BoxFile.folder_tree(xml)
+    xml = BoxFolder.get_folder_xml(current_user)
+    if BoxFolder.box_auth_valid?(xml)
+      @base = BoxFolder.folder_tree(xml)
     else
-      @folders = {}
-      current_user.box_auth_token = nil
-      current_user.save
-      flash[:error]= "The following error occured when trying to access Box:<br/>#{BoxFile.box_auth_status(xml)}<br/>"
+      @base = BoxFolder.new
+      # current_user.box_auth_token = nil
+      # current_user.save
+      flash[:error]= "The following error occured when trying to access Box:<br/>#{BoxFolder.box_auth_status(xml)}<br/>"
       flash[:error]+= "Re-link your Box account to show files"
       redirect_to :action=>"show", :controller=>"users", :id => current_user.id  
-    end    
+    end  
+    
   end
 
   def watch
