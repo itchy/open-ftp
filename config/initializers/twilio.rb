@@ -5,7 +5,7 @@ else
 end
 
 
-apiconfig = YAML.load_file(File.expand_path(File.dirname(__FILE__)) + '/api.yml.private')
+apiconfig = YAML.load_file(File.expand_path(File.dirname(__FILE__)) + yml_file )
 
 TWILIO_ACCOUNT_SID= ENV['TWILIO_ACCOUNT_SID'] || apiconfig["twilio"]["account_sid"]  
 TWILIO_AUTH_TOKEN= ENV['TWILIO_AUTH_TOKEN'] || apiconfig["twilio"]["auth_token"]  
